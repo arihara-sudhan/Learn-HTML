@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Game</title>
+	<script type="text/javascript">
+		function myFunction() {
+			var canvas = document.getElementById("testcanvas");
+			var context = canvas.getContext("2d");
+			context.beginPath();
+			context.arc(100, 300, 40, 0, Math.PI, true);
+			context.stroke();
+			context.beginPath();
+			context.arc(100, 300, 30, 0, 2 * Math.PI, true);
+			context.fill();
+
+			context.beginPath();
+			context.arc(200, 300, 25, 0, 3 / 2 * Math.PI, false);
+			context.stroke();
+			context.closePath();
+			context.fill();
+			 }
+	</script>
+</head>
+<body onload="myFunction();">
+<canvas width="400" height="400" id="testcanvas" style="border: 1px solid black;"> Your browser does not support HTML5 Canvas. Please shift to a newer browser. </canvas>
+</body>
+</html>
